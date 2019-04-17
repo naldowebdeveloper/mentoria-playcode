@@ -9,7 +9,11 @@ fazer as chamadas, pois o programa de correção já vai fazer isso. Seu objetiv
 		Definir uma função chamada triplicarValor. Se essa função receber o número 3 
 		por exemplo, ela retorna 9. E se receber o número 100, ela retorna 300.	
 *******************************************************************************/
-
+function triplicarValor(valor){
+	let multiplica = 3 * valor;
+	return multiplica; 
+}
+console.log(triplicarValor(100));
 
 
 
@@ -18,7 +22,12 @@ fazer as chamadas, pois o programa de correção já vai fazer isso. Seu objetiv
 		 Definir uma função chamada calcularComissao. Ela vai calcular a comissão dos 
 		 vendedores de uma loja. O percentual de comissão é 10%.
 *******************************************************************************/
-
+function calcularComissao(){
+	let comissao = 50 + 50;
+	let percentual = (comissao / 100) * 10;
+	return percentual;
+}
+console.log(calcularComissao());
 
 
 
@@ -29,7 +38,10 @@ fazer as chamadas, pois o programa de correção já vai fazer isso. Seu objetiv
 		o primeiro referente a idade da pessoa (30 anos por exemplo) e o segundo 
 		referente a idade mínima para aposentar, 65 anos por exemplo.
 *******************************************************************************/
-
+function calculaAnosAposentadoria(idadePessoa, idadeMinima){
+	return idadePessoa - idadeMinima;
+}
+console.log(calculaAnosAposentadoria(65, 30));
 
 
 
@@ -41,8 +53,12 @@ fazer as chamadas, pois o programa de correção já vai fazer isso. Seu objetiv
 		 Dentro dessa função, use a função criada na tarefa anterior para calcular 
 		 os anos que faltam para aposentadoria.
 *******************************************************************************/
+function mostrarMensagem(num1, num2){
+	var a = calculaAnosAposentadoria(num1, num2);
+	return "Faltam " + a + " anos para a sua aposentadoria";
+}
 
-
+console.log(mostrarMensagem(65, 55));
 
 
 /******************************************************************************* 
@@ -51,8 +67,16 @@ fazer as chamadas, pois o programa de correção já vai fazer isso. Seu objetiv
 		temperatura está negativa. Se estiver abaixo de zero retorna true (verdadeiro) 
 		e se estiver acima de zero retorna false (falso)	
 *******************************************************************************/
+function temperaturaNegativa(tempNegativa, tempPositiva){
+	let temperatura =  0;
 
-
+	if(temperatura < tempNegativa){
+		console.log(temperatura);
+	}else if(temperatura > tempPositiva){
+		console.log(temperatura);
+	}
+}
+temperaturaNegativa(-1, 10);
 
 
 /* 
@@ -71,7 +95,8 @@ https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects
 		https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt
 *******************************************************************************/
 
-let respostaTarefa6 = null;
+let respostaTarefa6 = Math.sqrt(289);
+console.log(">>> Tarefa 6: " + respostaTarefa6);
 
 
 
@@ -80,7 +105,8 @@ let respostaTarefa6 = null;
 		Quantos caracteres tem a frase "Ordem e progresso" ?
 *******************************************************************************/
 
-let respostaTarefa7 = null;
+let respostaTarefa7 = "Ordem e progresso";
+console.log(">>> Tarefa 7: " + respostaTarefa7.length)
 
 
 
@@ -89,7 +115,8 @@ let respostaTarefa7 = null;
 		Qual é a sétima letra da palavra "Dinossauro"
 *******************************************************************************/
 
-let respostaTarefa8 = null;
+let respostaTarefa8 = "Dinossauro";
+console.log(respostaTarefa8[7]);
 
 
 
@@ -99,7 +126,8 @@ let respostaTarefa8 = null;
 		palavra Ruby pela palavra Javascript.
 *******************************************************************************/
 
-let respostaTarefa9 = null;
+let respostaTarefa9 = "Eu sei programar em Ruby";
+console.log(respostaTarefa9.replace("Ruby", "Javascript"));
 
 
 
@@ -108,4 +136,5 @@ let respostaTarefa9 = null;
 		Que dia do mês é hoje?
 *******************************************************************************/
 
-let respostaTarefa10 = null;
+let respostaTarefa10 = new Date();
+console.log(respostaTarefa10.getDate());
