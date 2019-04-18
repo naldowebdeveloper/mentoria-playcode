@@ -8,11 +8,12 @@
 function termostato(temperatura) {
 	if(temperatura < 0){
 		return "Temperatura negativa";
-	}else if(temperatura > 0){
+	}else{
 		return "Temperatura positiva";
 	}
 } 
-console.log(termostato(-10));
+
+termostato(10);
 
 
 
@@ -26,8 +27,22 @@ console.log(termostato(-10));
 		nota válida, a função deve retornar "Aprovado" ou "Reprovado". A média para
 		aprovação é 60%.
 *******************************************************************************/
+function boletimEscolar(nota){
+	if(nota <= 10){
+		let media = nota * 10;
 
+		if(media >= 60){
+			return console.log("Aluno Aprovado");
+		}else if(media < 60){
+			return console.log("Aluno Reprovado");
+		}
+	}
+	else{
+		return console.log("Nota inválida");
+	}
+}
 
+boletimEscolar(6);
 
 
 
@@ -43,8 +58,20 @@ console.log(termostato(-10));
 		- RJ     -> 18,20
 		- Outros -> 35,90
 *******************************************************************************/
+var estados = {
+	MG: "12,50",
+	SP: "23,90",
+	RJ: "18,20",
+	Outros: "35,90"
+}
 
+function calcularFrete(estado){
+	if(estado == "SP"){
+		console.log(estados.MG);
+	}
+}
 
+calcularFrete("SP");
 
 
 
@@ -58,8 +85,17 @@ console.log(termostato(-10));
 		- de 1,60 a 1,85 -> "altura normal"
 		- mais de um 1,85 -> "joga basquete?"
 *******************************************************************************/
+function calcularAltura(altura){
+	if(altura < 1.60){
+		console.log("baixinho");
+	}else if(altura >= 1.60 || altura < 1.80){
+		console.log("altura normal");	
+	}else{
+		console.log("joga basquete?");
+	}
+}
 
-
+calcularAltura(1.60);
 
 
 
@@ -71,3 +107,11 @@ console.log(termostato(-10));
 		retorna a mensagem "Login efetuado com sucesso", senão, retorna a mensagem
 		"Senha inválida".
 *******************************************************************************/
+function validarSenha(senha){
+	if(senha == 123456){
+		return console.log("Login efetuado com sucesso");
+	} else{
+		return console.log("Senha inválida");
+	}
+}
+validarSenha(123456);
