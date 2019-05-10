@@ -4,6 +4,10 @@
 		os dias úteis da semana:
 		Segunda-feira, Terça-feira, Quarta-feira, Quinta-feira, Sexta-feira
 *******************************************************************************/
+function diasUteis(){
+	var semana = ['Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira'];
+	return semana;
+}
 
 
 
@@ -16,7 +20,11 @@
 		push. Referência:
 		https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 *******************************************************************************/
-
+function semanaCompleta(){
+	var dias = diasUteis();
+	dias.push('Sábado','Domingo');
+	return dias;
+}
 
 
 
@@ -30,7 +38,37 @@
 		Tabela Periódica para consulta:
 		https://pt.wikipedia.org/wiki/Tabela_peri%C3%B3dica#Estrutura_da_tabela_peri%C3%B3dica
 *******************************************************************************/
+function tabelaPeriodica(){
+	var tabela = [
+		{
+			Sigla: 'H', 
+			nome: 'Hidrogênio', 
+			numeroAtomico: 1
+		},
+		{
+			Sigla: 'Li', 
+			nome: 'Lítio', 
+			numeroAtomico: 2
+		},
+		{
+			Sigla: 'Na', 
+			nome: 'Sódio', 
+			numeroAtomico: 3
+		},
+		{
+			Sigla: 'K', 
+			nome: 'Potássio', 
+			numeroAtomico: 4
+		},
+		{
+			Sigla: 'Rb', 
+			nome: 'Rubídio', 
+			numeroAtomico: 5
+		}
+	]
 
+	return tabela;
+}
 
 
 
@@ -42,3 +80,11 @@
 		retornado no array.
 		Exemplo: numerosImpares(10) deve retornar o array [1, 3, 5, 7, 9]
 *******************************************************************************/
+function numerosImpares(limite){
+	var impares = "";
+	for(i = 1; i <= limite; i++){
+		impares += "" + i++;  
+	}
+	return [impares];
+}
+numerosImpares(10);
